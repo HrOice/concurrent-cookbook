@@ -24,6 +24,7 @@ class PriceInfo() {
 
     public fun getPrice2(): Double {
         lock.readLock().lock()
+        //you can't edit price2 when use readLock
         println("${Thread.currentThread().name} start read2")
         val price = price2
         println("${Thread.currentThread().name} end read2")
