@@ -6,7 +6,7 @@ package io.prisoner.learn.cookbook.chapter2.section5
  * AUTHOR: macbook
  */
 fun main(args: Array<String>) {
-    val printQueue = PrintQueueFair()
+    val printQueue = PrintQueue()
     val thread = arrayOfNulls<Thread>(10)
     for (i in 0..9) {
         thread[i] = Thread(Job(printQueue))
