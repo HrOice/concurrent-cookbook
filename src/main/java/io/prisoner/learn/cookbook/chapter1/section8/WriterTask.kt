@@ -15,7 +15,7 @@ class WriterTask(var deque: Deque<Event>): Runnable {
             println("Writer: ${Thread.currentThread().id} gen event $i")
             deque.addFirst(event)
             try {
-//                TimeUnit.SECONDS.sleep(1)
+                TimeUnit.SECONDS.sleep(1)
             } catch (e: InterruptedException) {
                 e.printStackTrace()
             }

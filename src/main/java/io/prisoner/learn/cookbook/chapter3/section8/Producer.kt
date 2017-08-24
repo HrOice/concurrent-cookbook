@@ -18,7 +18,7 @@ class Producer(private val exchanger: Exchanger<List<String>>, private var buffe
                 buffer.add(message)
             }
             try {
-                val buffer = exchanger.exchange(buffer)
+                buffer = exchanger.exchange(buffer) as MutableList<String>
             } catch (e: InterruptedException) {
                 e.printStackTrace()
             }
